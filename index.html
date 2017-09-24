@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" Quick Description of Project ">
+
+	<title> Vertical Image Thumbnail List </title>
+	
+	<link rel="stylesheet" type="text/css" href="resources/style.css">
+</head>
+<body>
+<section id="main">
+	
+</section>
+	<nav>
+		<svg class="arrow" id="up" version="1.1" width="32px" height="32px" viewBox="0 0 64 64">
+			<g>
+				<polygon points="49.707,39.146 32.707,22 31.293,22 14.293,39.146 15.707,40.634 32,24.377 48.293,40.615 	"/>
+			</g>
+		</svg>
+		<svg class="arrow" id="down" version="1.1" width="32px" height="32px" viewBox="0 0 64 64">
+			<g>
+				<polygon points="48.293,23.293 32,39.586 15.707,23.293 14.293,24.854 31.293,42 32.707,42 49.707,24.854 	"/>
+			</g>
+		</svg>
+
+		<div id="thumbnailWrapper">
+			<ul id="thumbnail">
+				<li class="link active"><a href="#"></a></li>
+				<li class="link"></li>
+				<li class="link"></li>
+				<li class="link"></li>
+				<li class="link"></li>
+				<li class="link"></li>
+				<li class="link"></li>
+			</ul>
+		</div>
+
+		<div id="infoBox">
+			<h1 class="title">  </h1>
+			<h2 class="photographer">  </h2>
+
+			<button id="launchModal"> i </button>
+		</div>
+	</nav>
+
+	<div id="modalWrapper">
+		<div id="infoModal">
+			<div class="divider"></div>
+			<ul id="topInfo">
+				<li>
+					<h3>Name</h3>
+					<p class="title"></p>
+				</li>
+				<li>
+					<h3>Photographer</h3>
+					<p class="photographer"></p>
+				</li>
+				<li>
+					<h3>Location</h3>
+					<p class="location"></p>
+				</li>
+			</ul>
+
+			<ul id="bottomInfo">
+				<li> 
+					<h3>ISO</h3>
+					<p class="info"></p>
+				</li>
+				<li>
+					<h3>Apeture</h3>
+					<p class="info"></p> 
+				</li>
+				<li>
+					<h3>Focal Length</h3>
+					<p class="info"></p>  
+				</li>
+				<li>
+					<h3>Shutter</h3>
+					<p class="info"></p>
+				</li>
+			</ul>
+		</div>
+
+		<button id="closeModal"> X </button>
+	</div>
+
+	
+	
+
+
+	<script src="resources/images.js"></script>
+	<script src="resources/script.js"></script>
+</body>
+</html>

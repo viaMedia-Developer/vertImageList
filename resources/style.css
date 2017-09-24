@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@font-face {
+	font-family: 'Quicksand';
+	src: url('Quicksand-Regular.otf');
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	/*overflow: hidden;*/
+
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	font-weight: 300;
+}
+
+section#main {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background-size: cover;
+	background-position: center center;
+	transition: opacity ease-out 0.5s;
+	z-index: -9999;
+}
+
+nav {
+	display: table;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity ease-out 0.3s;
+
+	/*padding: 10px;*/
+	/*border: 1px solid #6C7A95;*/
+}
+
+nav svg.arrow {
+	position: absolute;
+	left: 35px;
+	fill: white;
+	transition: fill ease-out 0.3s;
+	transform: scale(1.5);
+}
+nav svg#up {
+	top: 0;
+	fill: rgba(255, 255, 255, 0.4);
+}
+nav svg#down {
+	bottom: -10px;
+}
+
+
+div#thumbnailWrapper {
+	display: inline-block;
+	width: 105px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	transform: translateY(8%);
+}
+
+ul#thumbnail {
+	display: inline-block;
+	height: 275px; /*make height less to cut off 3rd li, to indicate scrolling?*/
+	overflow-y: scroll;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-right: 15.454px;
+	/*border-top: 2px solid gray;*/
+    /*border-bottom: 2px solid gray;*/
+}
+
+ul#thumbnail li {
+	display: block;
+	width: 100px;
+	height: 75px;
+	margin: 10px 0;
+	border: 2px solid transparent;
+	border-radius: 2px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: border-color ease-out 0.3s;
+}
+
+ul#thumbnail li:hover {
+	border-color: rgba(140, 22, 250, 0.7);
+}
+
+ul#thumbnail li.active { border-color: rgba(140, 22, 250, 0.4); }
+
+nav div#infoBox {
+	display: inline-block;
+	width: 295px;
+	margin: 0 20px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	/*border: 1px solid #6C7A95;*/
+	border-radius: 2px;
+}
+
+nav div#infoBox h1,
+nav div#infoBox h2 {
+	margin: 10px auto 0;
+	text-align: left;
+	font-weight: 300;
+	transition: opacity ease-out 0.5s;
+}
+
+nav div#infoBox h1 { 
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1.15em; 
+	color: #ffffff;
+}
+
+nav div#infoBox h2 { 
+	margin-top: 8px;
+	font-family: 'Quicksand', sans-serif; 
+	font-size: 0.9em; 
+	color: #cccccc; 
+}
+
+	.fade  { animation: 0.5s ease-out forwards fade; } 
+
+	@keyframes fade {
+		0% {opacity: 1;}
+		100% {opacity: 0;}
+	}
+
+	.appear { animation: 0.5s ease-out forwards appear; } 
+
+	@keyframes appear {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+
+
+
+nav div#infoBox button {
+	/*display: inline-block;*/
+	margin: 20px auto 10px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-55%) scale(0.9);
+
+	font-family: 'Raleway';
+	font-size: 1.15em;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 50px;
+	padding: 8px 17px;
+	background-color: transparent;
+	transition: all ease-out 0.3s;
+}
+
+nav div#infoBox button:hover {
+	background-color: rgba(82, 82, 82, 0.75);
+}
+
+nav div#infoBox button:focus { outline: none; }
+
+
+
+
+
+
+
+
+
+div#modalWrapper {
+	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: relative;
+	opacity: 0;
+	transition: opacity ease-out 0.3s;
+}
+
+div#modalWrapper button#closeModal {
+	font-family: 'Raleway';
+    font-size: 1.15em;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: all ease-out 0.3s;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div#modalWrapper button#closeModal:hover {
+	background-color: rgba(82, 82, 82, 0.85);
+}
+
+div#modalWrapper button#closeModal:focus { outline: none; }
+
+div.modalOpen {	animation: 0.3s ease-in forwards fadeIn; }
+
+div.modalClose { animation: 0.3s ease-in forwards fadeOut; }
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+div#infoModal {
+	position: absolute;
+	width: 490px; /*temporary solution*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 2px;
+}
+
+div#infoModal .divider {
+	width: 90%;
+	margin: 0 auto;
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 0.5px solid #a0a0a0;
+}
+
+div#infoModal ul {
+	width: 99%;
+	list-style-type: none;
+	margin: 10px auto;
+	padding: 0;
+	float: left;
+}
+
+div#infoModal ul#topInfo {
+	margin-top: 0;
+}
+
+div#infoModal ul#bottomInfo {
+	margin-top: 20px;
+	margin-left: -15px;
+	margin-bottom: 20px;
+}
+
+div#infoModal ul#topInfo li {
+	display: inline-block;
+	width: 33.3333%;
+	float: left;
+}
+
+div#infoModal ul#topInfo li * {
+	margin-left: 20px;
+}
+
+div#infoModal ul#bottomInfo li {
+	display: inline-block;
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+
+div#infoModal ul#bottomInfo li * {
+	transform: scale(0.87);
+}
+
+div#infoModal ul li h3 {
+	font-family: 'Raleway';
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	font-weight: 100;
+	color: #5a5a5a;
+}
+
+div#infoModal ul li p {
+	font-family: 'Quicksand';
+	margin: 0;
+	color: #8a8a8a;
+}
+
+div#infoModal ul#topInfo li p {
+	width: 80%;
+	font-size: 0.82em;
+}
+
+div#infoModal ul#bottomInfo li h3 {
+	font-size: 1.25em;
+}
