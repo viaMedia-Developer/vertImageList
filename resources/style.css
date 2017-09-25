@@ -8,13 +8,8 @@ body {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
-	padding: 0;
-	/*overflow: hidden;*/
-
-	background-size: cover;
-	background-position: center center;
 	position: relative;
-	font-weight: 300;
+	padding: 0;
 }
 
 section#main {
@@ -22,10 +17,10 @@ section#main {
 	width: 100%;
 	height: 100vh;
 	margin: 0;
-	padding: 0;
 
 	background-size: cover;
 	background-position: center center;
+	padding: 0;
 	transition: opacity ease-out 0.5s;
 	z-index: -9999;
 }
@@ -37,9 +32,6 @@ nav {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: opacity ease-out 0.3s;
-
-	/*padding: 10px;*/
-	/*border: 1px solid #6C7A95;*/
 }
 
 nav svg.arrow {
@@ -49,34 +41,33 @@ nav svg.arrow {
 	transition: fill ease-out 0.3s;
 	transform: scale(1.5);
 }
+
 nav svg#up {
 	top: 0;
 	fill: rgba(255, 255, 255, 0.4);
 }
+
 nav svg#down {
 	bottom: -10px;
 }
 
-
 div#thumbnailWrapper {
 	display: inline-block;
 	width: 105px;
-	overflow: hidden;
 	position: relative;
 	top: 50%;
 	transform: translateY(8%);
+	overflow: hidden;
 }
 
 ul#thumbnail {
 	display: inline-block;
-	height: 275px; /*make height less to cut off 3rd li, to indicate scrolling?*/
-	overflow-y: scroll;
-	list-style-type: none;
+	height: 275px; 
 	margin: 0;
 	padding: 0;
 	padding-right: 15.454px;
-	/*border-top: 2px solid gray;*/
-    /*border-bottom: 2px solid gray;*/
+	list-style-type: none;
+	overflow-y: scroll;
 }
 
 ul#thumbnail li {
@@ -106,10 +97,9 @@ nav div#infoBox {
 	top: 50%;
 	transform: translateY(-50%);
 
-	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.5);
-	/*border: 1px solid #6C7A95;*/
 	border-radius: 2px;
+	padding: 10px;
 }
 
 nav div#infoBox h1,
@@ -150,7 +140,6 @@ nav div#infoBox h2 {
 
 
 nav div#infoBox button {
-	/*display: inline-block;*/
 	margin: 20px auto 10px;
 	position: relative;
 	left: 50%;
@@ -159,10 +148,10 @@ nav div#infoBox button {
 	font-family: 'Raleway';
 	font-size: 1.15em;
 	color: #ffffff;
+	background-color: transparent;
 	border: 1px solid #ffffff;
 	border-radius: 50px;
 	padding: 8px 17px;
-	background-color: transparent;
 	transition: all ease-out 0.3s;
 }
 
@@ -184,25 +173,25 @@ div#modalWrapper {
 	display: none;
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.7);
 	position: relative;
-	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.7);
 	transition: opacity ease-out 0.3s;
+	opacity: 0;
 }
 
 div#modalWrapper button#closeModal {
-	font-family: 'Raleway';
-    font-size: 1.15em;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 50px;
-    padding: 10px 15px;
-    background-color: transparent;
-    transition: all ease-out 0.3s;
-    position: absolute;
+	position: absolute;
     top: 72%;
     left: 50%;
     transform: translateX(-50%);
+	font-family: 'Raleway';
+    font-size: 1.15em;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    transition: all ease-out 0.3s;
 }
 
 div#modalWrapper button#closeModal:hover {
@@ -227,13 +216,13 @@ div.modalClose { animation: 0.3s ease-in forwards fadeOut; }
 
 div#infoModal {
 	position: absolute;
-	width: 490px; /*temporary solution*/
+	width: 490px; 
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 10px;
 	background-color: #ffffff;
 	border-radius: 2px;
+	padding: 10px;
+	transform: translate(-50%, -50%);
 }
 
 div#infoModal .divider {
@@ -242,8 +231,8 @@ div#infoModal .divider {
 	position: absolute;
 	top: 52%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	border: 0.5px solid #a0a0a0;
+	transform: translate(-50%, -50%);	
 }
 
 div#infoModal ul {
