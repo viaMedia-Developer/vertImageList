@@ -1,7 +1,17 @@
 {
 	Date: (9.25.17)
-	Commit: 
-	Project Version: 
+	Commit: 3nd Commit 
+	Project Version: Initial
 }
 
-# 
+# Added github pages link for project to README.md
+
+
+{
+	Date: (9.25.17)
+	Commit: 2nd Commit
+	Project Version: Initial
+}
+
+# Cleaned up and organized CSS code.
+# Made additions to README.md
